@@ -1,6 +1,8 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Recipe = ({ recipe }) => {
+  const notify = () => toast("Add to favourite!");
   console.log(recipe);
   const { recipe_name, rating, ingredients, cooking_method } = recipe;
   return (
@@ -20,7 +22,10 @@ const Recipe = ({ recipe }) => {
       </p>
       <div className="my-5 flex justify-between items-center">
         <p className="font-semibold">Ratings : {rating}</p>
-        <button className="font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-3  focus:outline-none focus:shadow-outline">
+        <button
+          onClick={notify}
+          className="font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-3  focus:outline-none focus:shadow-outline"
+        >
           Add to Favourite
         </button>
       </div>
