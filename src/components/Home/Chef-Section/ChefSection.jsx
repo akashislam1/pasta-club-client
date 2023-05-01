@@ -12,7 +12,7 @@ const ChefSection = ({ data }) => {
   } = data;
   return (
     <div className="border rounded-md">
-      <div className="">
+      <div>
         <img className="w-96 h-64 rounded-md" src={chef_picture} alt="" />
       </div>
       <div className="p-4">
