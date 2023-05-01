@@ -11,10 +11,12 @@ const NavBar = () => {
     <div className="relative shadow-md rounded-md">
       <div className="w-full md:w-5/6 mx-auto hidden md:block  ">
         <nav className=" z-50 p-4 rounded-md flex justify-between items-center ">
-          <h2 className="flex items-center gap-2 cursor-pointer">
-            <FaHamburger className="text-[#F58D00] text-xl"></FaHamburger>{" "}
-            <span className="font-bold text-xl text-[#F17228] ">Pasta</span>
-            <span className="font-bold text-xl text-[#FFB30E]">Club</span>
+          <h2>
+            <Link to="/" className="flex items-center gap-2">
+              <FaHamburger className="text-[#F58D00] text-xl "></FaHamburger>{" "}
+              <span className="font-bold text-xl text-[#F17228] ">Pasta</span>
+              <span className="font-bold text-xl text-[#FFB30E]">Club</span>
+            </Link>
           </h2>
           <div className="flex gap-3 font-semibold text-[#F17228]">
             <NavLink
