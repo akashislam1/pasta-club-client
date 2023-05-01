@@ -13,7 +13,11 @@ const ChefSection = ({ data }) => {
   return (
     <div className="border rounded-md">
       <div>
-        <img className="w-96 h-64 rounded-md" src={chef_picture} alt="" />
+        <img
+          className="w-full md:w-96 md:h-64 rounded-md"
+          src={chef_picture}
+          alt=""
+        />
       </div>
       <div className="p-4">
         <h3 className="font-bold text-xl">Chef Name : {chef_name}</h3>

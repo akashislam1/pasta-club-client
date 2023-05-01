@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ChefSection from "../Chef-Section/ChefSection";
 import FoodItem from "../Food/FoodItem";
+import Comment from "../Comment/Comment";
 
 const Home = () => {
   const chefdata = useLoaderData();
@@ -25,6 +26,9 @@ const Home = () => {
         <div>
           <FoodItem></FoodItem>
         </div>
+      </section>
+      <section className="my-20">
+        <Comment></Comment>
       </section>
     </div>
   );

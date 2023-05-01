@@ -13,3 +13,7 @@
 .my-absolute-class {
   @apply bg-black px-6 py-4 bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200  text-xl flex items-center justify-center;
 }
+
+.my-btn-primary {
+  @apply font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] hover:border hover:border-[#F65900]  py-2 px-4;
+}
