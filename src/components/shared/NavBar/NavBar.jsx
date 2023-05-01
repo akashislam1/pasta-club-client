@@ -30,6 +30,12 @@ const NavBar = () => {
               Blog
             </NavLink>
             <Link to="/">User Profile Pictur</Link>
+            <NavLink
+              to="/login"
+              className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              Login
+            </NavLink>
           </div>
         </nav>
       </div>

@@ -38,8 +38,8 @@ const ErrorPage = () => {
             {error?.message}
           </p>
           <Link to="/" className="btn-primary ">
-            <span className="text-xs bg-yellow-500 p-2 rounded-sm">
-              Homepage
+            <span className="text-xs font-semibold bg-yellow-500 p-2 rounded-md">
+              Back to Home
             </span>
           </Link>
         </div>
