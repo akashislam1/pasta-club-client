@@ -8,7 +8,7 @@ const NavBar = () => {
     setMenu(!menu);
   };
   return (
-    <div className="relative">
+    <div className="relative shadow-md rounded-md">
       <div className="w-full md:w-5/6 mx-auto hidden md:block  ">
         <nav className=" z-50 p-4 rounded-md flex justify-between items-center ">
           <h2 className="flex items-center gap-2 cursor-pointer">
@@ -51,10 +51,20 @@ const NavBar = () => {
         <div className="absolute inset-y-16 left-0 w-full max-h-min bg-[#FFCD1E] p-5">
           <ul className="text-center font-bold">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Blog
+              </NavLink>
             </li>
           </ul>
         </div>
