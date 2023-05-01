@@ -5,3 +5,11 @@
 .active {
   @apply font-medium tracking-wide text-[#b14406] transition-colors duration-200;
 }
+
+.my-relative-class {
+  @apply overflow-hidden relative transition duration-200 transform hover:-translate-y-2 rounded shadow-lg hover:shadow-2xl;
+}
+
+.my-absolute-class {
+  @apply bg-black px-6 py-4 bg-opacity-75 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200  text-xl flex items-center justify-center;
+}

@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ChefSection from "../Chef-Section/ChefSection";
+import FoodItem from "../Food/FoodItem";
 
 const Home = () => {
   const chefdata = useLoaderData();
@@ -15,6 +16,14 @@ const Home = () => {
           {chefdata?.map((data) => (
             <ChefSection key={data.chef_id} data={data}></ChefSection>
           ))}
+        </div>
+      </section>
+      <section className="my-20">
+        <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
+          Our <span className="text-[#F65900] underline">Delicious Foods</span>
+        </h1>
+        <div>
+          <FoodItem></FoodItem>
         </div>
       </section>
     </div>
