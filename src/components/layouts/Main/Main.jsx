@@ -4,9 +4,9 @@ import Footer from "../../shared/Footer/Footer";
 
 const Main = () => {
   return (
-    <div className="w-full md:w-5/6 mx-auto">
+    <div className="w-full md:w-5/6 mx-auto p-1">
       <NavBar></NavBar>
-      <div className=" md:min-h-[calc(100vh-132px)]">
+      <div className="min-h-screen md:min-h-[calc(100vh-132px)]">
         <Outlet />
       </div>
       <Footer></Footer>

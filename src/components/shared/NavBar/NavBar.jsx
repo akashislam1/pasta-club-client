@@ -54,7 +54,7 @@ const NavBar = () => {
         </div>
       </div>
       {menu && (
-        <div className="absolute inset-y-16 left-0 w-full max-h-min bg-[#FFCD1E] p-5">
+        <div className="absolute inset-y-16 left-0 w-full max-h-min bg-[#FFCD1E] p-5 text-white">
           <ul className="text-center font-bold">
             <li>
               <NavLink
@@ -70,6 +70,14 @@ const NavBar = () => {
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
                 Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Login
               </NavLink>
             </li>
           </ul>
