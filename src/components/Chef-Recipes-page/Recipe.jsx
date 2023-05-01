@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Recipe = ({ recipe }) => {
-  const notify = () => toast("Add to favourite!");
+  const [disabled, setDisabled] = useState(false);
+  const notify = () => {
+    toast("Add to favourite !!");
+    setDisabled(true);
+  };
+
   console.log(recipe);
   const { recipe_name, rating, ingredients, cooking_method } = recipe;
   return (
@@ -23,8 +28,13 @@ const Recipe = ({ recipe }) => {
       <div className="my-5 flex justify-between items-center">
         <p className="font-semibold">Ratings : {rating}</p>
         <button
+          disabled={disabled}
           onClick={notify}
-          className="font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-3  focus:outline-none focus:shadow-outline"
+          className={` ${
+            disabled
+              ? "disabled:bg-[#F65900] py-2 px-3 text-white font-bold opacity-25"
+              : "font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-3  focus:outline-none focus:shadow-outline"
+          }  `}
         >
           Add to Favourite
         </button>
