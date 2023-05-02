@@ -1,8 +1,10 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+  const { setUser, googleLogin, gitHubLogin, signIn } = useContext(AuthContext);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
@@ -76,7 +78,10 @@ const Login = () => {
             </button>
           </div>
           <div className="flex flex-col gap-3 my-4 font-bold">
-            <button className="flex justify-center items-center gap-3 border py-2 rounded-md">
+            <button
+              onClick={googleLogin}
+              className="flex justify-center items-center gap-3 border py-2 rounded-md"
+            >
               <span>
                 <svg
                   className="w-6 h-6"
@@ -105,7 +110,10 @@ const Login = () => {
               </span>
               Sign in with Google
             </button>
-            <button className="flex justify-center items-center gap-3 border py-2 rounded-md">
+            <button
+              onClick={gitHubLogin}
+              className="flex justify-center items-center gap-3 border py-2 rounded-md"
+            >
               <span>
                 <svg
                   className="w-6 h-6"
