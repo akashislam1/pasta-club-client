@@ -16,6 +16,18 @@ const Login = () => {
     e.preventDefault();
     setSuccess("");
     setError("");
+
+    // sign in user
+    signIn(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        setUser(loggedUser);
+        setSuccess("Successfully logged in");
+        e.target.reset();
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
