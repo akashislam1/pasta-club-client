@@ -17,6 +17,7 @@ const SignUp = () => {
     setSuccess("");
     setError("");
     const username = e.target.username.value;
+    const userPhotoUrl = e.target.userphoto.value;
 
     // password validation
     if (password.length < 6) {
@@ -28,7 +29,7 @@ const SignUp = () => {
         const signUpedUser = result.user;
 
         // update user profile
-        updateUserInfo(signUpedUser, username)
+        updateUserInfo(signUpedUser, username, userPhotoUrl)
           .then((result) => {})
           .catch((err) => {
             setError(err.message);
@@ -43,10 +44,6 @@ const SignUp = () => {
         setError(error.message);
       });
   };
-
-  // const phtourl = (e) => {
-  //   console.log(e.target.userphoto);
-  // };
 
   return (
     <div className="w-full md:w-5/6 mx-auto">
@@ -64,7 +61,7 @@ const SignUp = () => {
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
+              name="username"
               type="text"
               placeholder="Username"
               required
@@ -78,8 +75,8 @@ const SignUp = () => {
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               onChange={(e) => setEmail(e.target.value)}
-              id="useremail"
               type="email"
+              name="useremail"
               placeholder="Email address"
               required
             />
@@ -93,9 +90,9 @@ const SignUp = () => {
               <input
                 className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 onChange={(e) => setPassword(e.target.value)}
-                id="password"
                 type={passShow ? "text" : "password"}
                 placeholder="Password"
+                name="password"
                 required
               />
               <div
@@ -108,20 +105,19 @@ const SignUp = () => {
             <span className="text-green-600">{success}</span>
             <span className="text-red-600">{error}</span>
           </div>
-          {/* <div className="mb-4">
+          <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               User Photo
               <span className="text-red-600 font-extrabold"> *</span>
             </label>
             <input
-              onChange={phtourl}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="userphoto"
+              name="userphoto"
               type="text"
               placeholder="UserPhotoUrl"
               required
             />
-          </div> */}
+          </div>
 
           <div className="flex items-center justify-between">
             <button
