@@ -16,7 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/chefdata"),
+        loader: () =>
+          fetch(
+            "https://the-pasta-people-server-akashislam1.vercel.app/chefdata"
+          ),
       },
       {
         path: "/blog",
@@ -34,7 +37,9 @@ const router = createBrowserRouter([
         path: "/chefRecipes/:id",
         element: <ChefRecipes></ChefRecipes>, // private route
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefdata/${params.id}`),
+          fetch(
+            `https://the-pasta-people-server-akashislam1.vercel.app/chefdata/${params.id}`
+          ),
       },
     ],
   },

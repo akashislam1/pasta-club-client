@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ChefSection = ({ data }) => {
   const {
@@ -13,11 +15,12 @@ const ChefSection = ({ data }) => {
   return (
     <div className="border rounded-md">
       <div>
-        <img
+        <LazyLoadImage
           className="w-full md:w-96 md:h-64 rounded-md"
-          src={chef_picture}
           alt=""
-        />
+          effect="blur"
+          src={chef_picture}
+        ></LazyLoadImage>
       </div>
       <div className="p-4">
         <h3 className="font-bold text-xl">Chef Name : {chef_name}</h3>

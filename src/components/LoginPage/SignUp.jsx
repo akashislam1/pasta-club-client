@@ -35,7 +35,6 @@ const SignUp = () => {
             setError(err.message);
           });
 
-        console.log(signUpedUser);
         setUser(signUpedUser);
         setSuccess("Successfully sign up");
         e.target.reset();

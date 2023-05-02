@@ -1,8 +1,11 @@
-import { useState } from "react";
-import { FaHamburger, FaList, FaTimes } from "react-icons/fa";
+import { useContext, useState } from "react";
+import { FaHamburger, FaList, FaTimes, FaUserCircle } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const [menu, setMenu] = useState(false);
   const handleMenu = () => {
     setMenu(!menu);
@@ -18,7 +21,7 @@ const NavBar = () => {
               <span className="font-bold text-xl text-[#FFB30E]">Club</span>
             </Link>
           </h2>
-          <div className="flex gap-3 font-semibold text-[#F17228]">
+          <div className="flex items-center gap-3 font-semibold text-[#F17228]">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "default")}
@@ -31,13 +34,55 @@ const NavBar = () => {
             >
               Blog
             </NavLink>
-            <Link to="/">User Profile Pictur</Link>
-            <NavLink
-              to="/login"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Login
-            </NavLink>
+
+            {user ? (
+              <div className="flex items-center gap-3">
+                <Link onClick={logOut}>Sign Out</Link>
+                {user ? (
+                  <div className="group flex relative">
+                    <img
+                      className="w-8 h-8 rounded-full cursor-pointer"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto py-1 px-2 ">
+                      {user.displayName}
+                    </span>
+                  </div>
+                ) : (
+                  <Link>
+                    <FaUserCircle className="w-8 h-8"></FaUserCircle>
+                  </Link>
+                )}
+              </div>
+            ) : (
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Login
+              </NavLink>
+            )}
+
+            {/* {(user && (
+              <div className="group flex relative">
+                <img
+                  className={`w-8 h-8 rounded-full hover:${user?.displayName}`}
+                  src={user.photoURL}
+                  alt=""
+                />
+                <span
+                  className="group-hover:opacity-100 transition-opacity bg-gray-800  text-sm text-gray-100 rounded-md absolute left-1/2 
+                  -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto py-1 px-2"
+                >
+                  {user.displayName}
+                </span>
+              </div>
+            )) || (
+              <Link>
+                <FaUserCircle className="w-8 h-8"></FaUserCircle>
+              </Link>
+            )} */}
           </div>
         </nav>
       </div>
@@ -56,7 +101,7 @@ const NavBar = () => {
         </div>
       </div>
       {menu && (
-        <div className="absolute inset-y-16 left-0 w-full max-h-min bg-[#FFCD1E] p-5 text-white">
+        <div className="z-50 absolute inset-y-16 left-0 w-full max-h-min bg-[#FFCD1E] p-5 text-white">
           <ul className="text-center font-bold">
             <li>
               <NavLink
@@ -75,12 +120,18 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/login"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Login
-              </NavLink>
+              {user ? (
+                <Link onClick={logOut}>Sign Out</Link>
+              ) : (
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Login
+                </NavLink>
+              )}
             </li>
           </ul>
         </div>

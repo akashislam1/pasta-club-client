@@ -13,7 +13,7 @@ const Comment = () => {
           placeholder="Add your comment here...."
         ></textarea>
       </div>
-      <div className="flex justify-center my-5">
+      <div className="flex justify-center my-5 w-auto">
         <button className="my-btn-primary">Add Comment</button>
       </div>
     </div>

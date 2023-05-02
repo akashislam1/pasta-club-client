@@ -15,5 +15,5 @@
 }
 
 .my-btn-primary {
-  @apply font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] hover:border hover:border-[#F65900]  py-2 px-4;
+  @apply font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border border-[#F65900]   py-2 px-4;
 }
