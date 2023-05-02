@@ -45,7 +45,7 @@ const NavBar = () => {
                       src={user.photoURL}
                       alt=""
                     />
-                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto py-1 px-2 ">
+                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 mt-5 mx-auto py-1 px-2 w-28 text-center">
                       {user.displayName}
                     </span>
                   </div>

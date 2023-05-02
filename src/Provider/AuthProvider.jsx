@@ -11,6 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext(null);
 
@@ -20,6 +21,8 @@ const gitHubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   // google login provider
   const googleLogin = () => {
@@ -63,6 +66,10 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     loading,
+    success,
+    setSuccess,
+    error,
+    setError,
     setUser,
     createUser,
     signIn,

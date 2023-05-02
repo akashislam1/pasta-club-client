@@ -8,7 +8,6 @@ const Recipe = ({ recipe }) => {
     setDisabled(true);
   };
 
-  console.log(recipe);
   const { recipe_name, rating, ingredients, cooking_method } = recipe;
   return (
     <div className=" p-5 bg-slate-100 shadow-lg rounded-md mb-10">

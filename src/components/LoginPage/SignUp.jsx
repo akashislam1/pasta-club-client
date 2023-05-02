@@ -4,14 +4,20 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
-  const { createUser, setUser, updateUserInfo } = useContext(AuthContext);
+  const {
+    createUser,
+    setUser,
+    updateUserInfo,
+    success,
+    setSuccess,
+    error,
+    setError,
+  } = useContext(AuthContext);
   const [passShow, setPassShow] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Submit Form
+  // handle sign up
   const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess("");

@@ -4,9 +4,16 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-  const { setUser, googleLogin, gitHubLogin, signIn } = useContext(AuthContext);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
+  const {
+    setUser,
+    googleLogin,
+    gitHubLogin,
+    signIn,
+    success,
+    setSuccess,
+    error,
+    setError,
+  } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passShow, setPassShow] = useState(false);
@@ -14,7 +21,7 @@ const Login = () => {
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
-  // Submit Form
+  // handle login
   const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess("");
@@ -34,6 +41,31 @@ const Login = () => {
       });
   };
 
+  // handle google login
+  const loginWithGoogle = () => {
+    googleLogin()
+      .then((result) => {
+        const googleLoginUser = result.user;
+        setUser(googleLoginUser);
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
+
+  // handle github login
+  const loginWithGithub = () => {
+    gitHubLogin()
+      .then((result) => {
+        const githubLoginUser = result.user;
+        setUser(githubLoginUser);
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
   return (
     <div className="w-full md:w-5/6 mx-auto">
       <h2 className="text-center text-2xl font-bold my-5">Login</h2>
@@ -95,7 +127,7 @@ const Login = () => {
           </div>
           <div className="flex flex-col gap-3 my-4 font-bold">
             <button
-              onClick={googleLogin}
+              onClick={loginWithGoogle}
               className="flex justify-center items-center gap-3 border py-2 rounded-md"
             >
               <span>
@@ -127,7 +159,7 @@ const Login = () => {
               Sign in with Google
             </button>
             <button
-              onClick={gitHubLogin}
+              onClick={loginWithGithub}
               className="flex justify-center items-center gap-3 border py-2 rounded-md"
             >
               <span>
