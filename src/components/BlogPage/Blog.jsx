@@ -1,8 +1,9 @@
-import React from "react";
-
 const Blog = () => {
   return (
     <div>
+      <div className="text-center p-10">
+        <h1 className="font-bold text-2xl">Frequently asked questions</h1>
+      </div>
       <div className="my-7">
         <h1 className="font-extrabold pl-4 my-4">
           1. What is the difference Between Controlled And Uncontrolled
