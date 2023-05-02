@@ -24,12 +24,12 @@ const AuthProvider = ({ children }) => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  // google login provider
+  // google login
   const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-  // gitHub login provider
+  // gitHub login
   const gitHubLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, gitHubProvider);

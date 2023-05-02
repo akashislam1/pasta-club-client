@@ -18,6 +18,8 @@
 
 - Icon -> [Hero Icon](https://react-icons.github.io/react-icons/)
 
+- SVG Icon -> [SVG Icon](https://iconscout.com/icons/google)
+
 - Tailwind Css -> [Tailwind Css](https://tailwindcss.com/)
 
 - React-Lazy-Load -> [React-Lazy-Load](https://www.npmjs.com/package/react-lazy-load-image-component)
