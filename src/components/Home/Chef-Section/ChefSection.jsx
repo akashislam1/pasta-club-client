@@ -31,7 +31,7 @@ const ChefSection = ({ data }) => {
         </div>
         <div className="my-3 flex justify-between items-center">
           <p className="font-semibold">Likes : {likes}</p>
-          <Link to={`/recipes/${chef_id}`}>
+          <Link to={`/chefRecipes/${chef_id}`}>
             <button className="font-bold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-4  focus:outline-none focus:shadow-outline">
               View Recipes
             </button>
