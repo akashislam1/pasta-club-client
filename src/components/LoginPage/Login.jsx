@@ -1,5 +1,5 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -10,7 +10,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passShow, setPassShow] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  const from = location.state?.from?.pathname || "/";
   // Submit Form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +27,7 @@ const Login = () => {
         setUser(loggedUser);
         setSuccess("Successfully logged in");
         e.target.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);

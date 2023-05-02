@@ -6,6 +6,7 @@ import Login from "../components/LoginPage/Login";
 import SignUp from "../components/LoginPage/SignUp";
 import ChefRecipes from "../components/Chef-Recipes-page/ChefRecipes";
 import Blog from "../components/BlogPage/Blog";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/chefRecipes/:id",
-        element: <ChefRecipes></ChefRecipes>, // private route
+        element: (
+          <PrivateRoute>
+            <ChefRecipes></ChefRecipes>
+          </PrivateRoute>
+        ), // private route
         loader: ({ params }) =>
           fetch(
             `https://the-pasta-people-server-akashislam1.vercel.app/chefdata/${params.id}`
