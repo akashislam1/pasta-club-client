@@ -1,6 +1,6 @@
 ## Live Link
 
-- Hosted in Firebase -> [Pasta Club]()
+- Hosted in Firebase -> [Pasta Club-1](https://the-pasta-people.web.app/) or [Pasta Club-2](https://the-pasta-people.firebaseapp.com/)
 
 ## React Router Dom v6.4
 
