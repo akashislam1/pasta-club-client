@@ -23,3 +23,5 @@
 - Tailwind Css -> [Tailwind Css](https://tailwindcss.com/)
 
 - React-Lazy-Load -> [React-Lazy-Load](https://www.npmjs.com/package/react-lazy-load-image-component)
+
+- React-to-PDF -> [React-To-PDF](https://codesandbox.io/examples/package/react-to-pdf)
