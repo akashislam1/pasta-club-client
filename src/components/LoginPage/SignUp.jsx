@@ -23,8 +23,6 @@ const SignUp = () => {
   // handle sign up
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess("");
-    setError("");
     const username = e.target.username.value;
     const userPhotoUrl = e.target.userphoto.value;
 
@@ -43,10 +41,9 @@ const SignUp = () => {
           .catch((err) => {
             setError(err.message);
           });
-
         setUser(signUpedUser);
-        setSuccess("Successfully sign up");
         e.target.reset();
+        navigate("/login");
       })
       .catch((error) => {
         setError(error.message);
@@ -142,14 +139,13 @@ const SignUp = () => {
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               User Photo
-              <span className="text-red-600 font-extrabold"> *</span>
+              <span className="font-extrabold"> *</span>
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="userphoto"
               type="text"
               placeholder="http://example.com"
-              required
             />
           </div>
 

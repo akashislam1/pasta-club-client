@@ -38,7 +38,7 @@ const NavBar = () => {
             {user ? (
               <div className="flex items-center gap-3">
                 <Link onClick={logOut}>Sign Out</Link>
-                {user ? (
+                {user.photoURL ? (
                   <div className="group flex relative">
                     <img
                       className="w-8 h-8 rounded-full cursor-pointer"
@@ -103,7 +103,7 @@ const NavBar = () => {
               {user ? (
                 <div className="flex flex-col justify-center items-center gap-3">
                   <Link onClick={logOut}>Sign Out</Link>
-                  {user ? (
+                  {user.photoURL ? (
                     <div className="group flex relative">
                       <img
                         className="w-8 h-8 rounded-full cursor-pointer"

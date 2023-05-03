@@ -24,15 +24,12 @@ const Login = () => {
   // handle login
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess("");
-    setError("");
 
     // sign in user
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
-        setSuccess("Successfully logged in");
         e.target.reset();
         navigate(from, { replace: true });
       })
