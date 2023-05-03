@@ -16,7 +16,7 @@ const ChefRecipes = () => {
     recipes,
   } = chefRecipes;
   return (
-    <>
+    <div className="w-full md:w-5/6 mx-auto">
       <div className="my-6">
         <div className="mx-auto w-3/4">
           <LazyLoadImage
@@ -54,7 +54,7 @@ const ChefRecipes = () => {
           <Recipe key={recipe.recipe_id} recipe={recipe}></Recipe>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

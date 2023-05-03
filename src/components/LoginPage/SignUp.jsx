@@ -23,6 +23,7 @@ const SignUp = () => {
   // handle sign up
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const username = e.target.username.value;
     const userPhotoUrl = e.target.userphoto.value;
 
@@ -44,6 +45,7 @@ const SignUp = () => {
         setUser(signUpedUser);
         e.target.reset();
         navigate("/login");
+        setError("");
       })
       .catch((error) => {
         setError(error.message);

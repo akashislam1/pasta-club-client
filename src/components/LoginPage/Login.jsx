@@ -21,6 +21,7 @@ const Login = () => {
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
+
   // handle login
   const handleSubmit = (e) => {
     e.preventDefault();

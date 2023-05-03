@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <section className="my-20">
+      <section className="w-full md:w-5/6 mx-auto my-20">
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           Our <span className="text-[#F65900] underline">Master Chef</span>
         </h1>
@@ -19,7 +19,7 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className="my-20">
+      <section className="w-full md:w-5/6 mx-auto my-20">
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           Our <span className="text-[#F65900] underline">Delicious Foods</span>
         </h1>
@@ -27,7 +27,7 @@ const Home = () => {
           <FoodItem></FoodItem>
         </div>
       </section>
-      <section className="my-20">
+      <section className="w-full md:w-5/6 mx-auto my-20">
         <Comment></Comment>
       </section>
     </div>

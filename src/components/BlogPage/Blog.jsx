@@ -1,8 +1,6 @@
-// import PDFFile from "../PDFFile/PDFFile";
-
 const Blog = () => {
   return (
-    <div>
+    <div className="w-full md:w-5/6 mx-auto">
       <div className="text-center p-10">
         <h1 className="font-bold text-2xl">Frequently asked questions</h1>
       </div>
@@ -11,9 +9,9 @@ const Blog = () => {
           1. What is the difference Between Controlled And Uncontrolled
           components?
         </h1>
-        <div className="relative overflow-x-auto mb-5">
+        <div className="relative overflow-x-auto mb-5 ">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 texc">
               <tr>
                 <th scope="col" className="px-6 py-3 font-extrabold">
                   Controlled components

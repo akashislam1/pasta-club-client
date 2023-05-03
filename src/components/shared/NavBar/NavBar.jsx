@@ -12,7 +12,7 @@ const NavBar = () => {
   };
   return (
     <div className="relative shadow-md rounded-md">
-      <div className="w-full md:w-5/6 mx-auto hidden md:block  ">
+      <div className="w-full md:w-5/6 mx-auto hidden md:block">
         <nav className=" z-50 p-4 rounded-md flex justify-between items-center ">
           <h2>
             <Link to="/" className="flex items-center gap-2">

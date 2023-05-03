@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Main = () => {
   return (
-    <div className="w-full md:w-5/6 mx-auto p-1">
+    <div className="w-full mx-auto p-1 md:p-0">
       <NavBar></NavBar>
       <div className="min-h-screen md:min-h-[calc(100vh-132px)]">
         <Outlet />
