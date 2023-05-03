@@ -5,11 +5,8 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
-
   const [menu, setMenu] = useState(false);
-  const handleMenu = () => {
-    setMenu(!menu);
-  };
+
   return (
     <div className="relative shadow-md rounded-md">
       <div className="w-full md:w-5/6 mx-auto hidden md:block">
@@ -72,7 +69,7 @@ const NavBar = () => {
           <span className="font-bold text-xl text-[#F17228] ">Pasta</span>
           <span className="font-bold text-xl text-[#FFB30E]">Club</span>
         </h2>
-        <div onClick={handleMenu}>
+        <div onClick={() => setMenu(!menu)}>
           {menu ? (
             <FaTimes className="text-xl text-[#F17228]"></FaTimes>
           ) : (
