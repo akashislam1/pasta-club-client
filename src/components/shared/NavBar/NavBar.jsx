@@ -36,9 +36,9 @@ const NavBar = () => {
               <div className="flex items-center gap-3">
                 <Link onClick={logOut}>Sign Out</Link>
                 {user.photoURL ? (
-                  <div className="group flex relative">
+                  <div className="group flex relative cursor-pointer">
                     <img
-                      className="w-8 h-8 rounded-full cursor-pointer"
+                      className="w-8 h-8 rounded-full "
                       src={user.photoURL}
                       alt=""
                     />
@@ -47,9 +47,12 @@ const NavBar = () => {
                     </span>
                   </div>
                 ) : (
-                  <Link>
+                  <div className="group flex relative cursor-pointer">
                     <FaUserCircle className="w-8 h-8"></FaUserCircle>
-                  </Link>
+                    <span className="group-hover:opacity-100 transition-opacity bg-gray-800 text-sm text-gray-100 rounded-md absolute left-1/2  -translate-x-1/2 translate-y-full opacity-0 mt-5 mx-auto py-1 px-2 w-28 text-center">
+                      {user.displayName}
+                    </span>
+                  </div>
                 )}
               </div>
             ) : (
