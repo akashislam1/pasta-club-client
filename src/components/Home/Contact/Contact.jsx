@@ -6,7 +6,7 @@ const Contact = () => {
       <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3 text-[#F65900]">
         Contact
       </h1>
-      <div className="overflow-x-hidden overflow-y-hidden grid md:grid-cols-2 gap-5 md:p-10">
+      <div className="grid md:grid-cols-2 gap-5 md:p-10">
         <div className="max-w-md mx-auto  rounded px-8  pb-8">
           <h4 className="font-bold text-xl text-[#F65900]">GET IN TOUCH</h4>
           <p className="font-semibold ">

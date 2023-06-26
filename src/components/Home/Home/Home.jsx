@@ -4,6 +4,7 @@ import ChefSection from "../Chef-Section/ChefSection";
 import FoodItem from "../Food/FoodItem";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
+import Reviews from "../Reviews/Reviews";
 
 const Home = () => {
   const chefdata = useLoaderData();
@@ -28,6 +29,9 @@ const Home = () => {
         <div>
           <FoodItem></FoodItem>
         </div>
+      </section>
+      <section className="w-full md:w-5/6 mx-auto my-20">
+        <Reviews></Reviews>
       </section>
       <section className="w-full md:w-5/6 mx-auto my-20">
         <Contact></Contact>
