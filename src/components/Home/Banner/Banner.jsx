@@ -4,8 +4,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div className="w-full md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 my-12 gap-4">
-      <div className="md:p-20">
+    <div className="w-full min-h-screen md:w-5/6 mx-auto flex flex-col md:flex-row justify-around items-center mt-12 gap-4">
+      <div className="md:p-10 md:w-1/2">
         <h1 className="text-3xl md:text-4xl font-bold p-3">
           Fun and Easy to become Master Cook
         </h1>
@@ -19,7 +19,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div className="md:w-1/2">
         <img className="md:w-3/5 mx-auto" src={BannerImage} alt="" />
       </div>
     </div>

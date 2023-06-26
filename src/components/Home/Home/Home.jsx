@@ -3,13 +3,15 @@ import Banner from "../Banner/Banner";
 import ChefSection from "../Chef-Section/ChefSection";
 import FoodItem from "../Food/FoodItem";
 import Comment from "../Comment/Comment";
+import About from "../About/About";
 
 const Home = () => {
   const chefdata = useLoaderData();
   return (
     <div>
       <Banner></Banner>
-      <section className="w-full md:w-5/6 mx-auto my-20">
+      <About></About>
+      <section className="w-full md:w-5/6 mx-auto min-h-screen">
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           Our <span className="text-[#F65900] underline">Master Chef</span>
         </h1>
