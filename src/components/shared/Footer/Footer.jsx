@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white">
-      <div className="grid md:grid-cols-3 gap-5 p-8">
+    <div className="bg-black text-white ">
+      <div className="grid md:grid-cols-3 gap-5 px-3 py-8 w-full md:w-5/6 mx-auto">
         <div>
           <h2 className="mb-4">
             <Link to="/" className="flex items-center gap-2">
