@@ -5,8 +5,8 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Login from "../components/LoginPage/Login";
 import SignUp from "../components/LoginPage/SignUp";
 import ChefRecipes from "../components/Chef-Recipes-page/ChefRecipes";
-import Blog from "../components/BlogPage/Blog";
 import PrivateRoute from "./PrivateRoute";
+import FoodsBlog from "../components/FoodsBlogPage/FoodsBlog";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
           ),
       },
       {
-        path: "/blog",
-        element: <Blog></Blog>,
+        path: "/foodblog",
+        element: <FoodsBlog></FoodsBlog>,
       },
       {
         path: "/login",

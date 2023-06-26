@@ -3,7 +3,7 @@ import aboutImg from "../../../assets/category/About.jpg";
 
 const About = () => {
   return (
-    <div className=" my-16 md:my-0 md:p-10 min-h-screen">
+    <div className=" w-full md:w-5/6 mx-auto min-h-screen">
       <div className="text-center font-bold text-4xl  mb-10">
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           About <span className="text-[#F65900] underline">Us</span>
@@ -27,10 +27,8 @@ const About = () => {
             balance the moisture levels in the dough, as the added ingredients
             can affect its consistency. Additionally, you may need to adjust the
             cooking time slightly, as colored pasta may cook faster or slower
-            than regular pasta. <br /> Whether green or red, these colored pasta
-            options can add a visually appealing touch to your Italian dishes
-            and provide a unique flavor profile. Enjoy experimenting with
-            different colors and flavors in your pasta creations!
+            than regular pasta. <br /> Enjoy experimenting with different colors
+            and flavors in your pasta creations!
           </p>
 
           <button className="font-semibold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-300 py-2 px-8  focus:outline-none focus:shadow-outline">

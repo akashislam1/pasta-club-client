@@ -26,10 +26,10 @@ const NavBar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/blog"
+              to="/foodblog"
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
-              Blog
+              Blogs
             </NavLink>
 
             {user ? (
@@ -93,10 +93,10 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/blog"
+                to="/foodblog"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
-                Blog
+                Blogs
               </NavLink>
             </li>
             <li>
