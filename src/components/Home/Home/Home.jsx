@@ -2,8 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ChefSection from "../Chef-Section/ChefSection";
 import FoodItem from "../Food/FoodItem";
-import Comment from "../Comment/Comment";
 import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 const Home = () => {
   const chefdata = useLoaderData();
@@ -21,7 +21,7 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className="w-full md:w-5/6 mx-auto my-20">
+      <section className="w-full md:w-5/6 mx-auto min-h-screen md:mt-24 mt-12">
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           Our <span className="text-[#F65900] underline">Delicious Foods</span>
         </h1>
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full md:w-5/6 mx-auto my-20">
-        <Comment></Comment>
+        <Contact></Contact>
       </section>
     </div>
   );

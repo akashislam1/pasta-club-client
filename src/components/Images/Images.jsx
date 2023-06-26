@@ -6,3 +6,6 @@ export const pasta3 = "../../../src/assets/blogs/pasta_3.jpg";
 export const pasta4 = "../../../src/assets/blogs/pasta_4.jpg";
 export const pasta5 = "../../../src/assets/blogs/pasta_5.jpg";
 export const pasta6 = "../../../src/assets/blogs/pasta_6.jpg";
+
+// contact images :
+export const contactImg = "../../../src/assets/contact/contact.jpg";
