@@ -14,7 +14,7 @@ const Banner = () => {
           with a fun way to learn
         </p>
         <div className="p-3">
-          <button className="font-semibold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-200 py-2 px-8  focus:outline-none focus:shadow-outline">
+          <button className="font-semibold text-white bg-[#F65900] text-center  rounded  hover:bg-white hover:text-[#F17228] border hover:border-[#F65900] duration-300 py-2 px-8  focus:outline-none focus:shadow-outline">
             Join us <FaArrowRight className="inline-block ml-3"></FaArrowRight>
           </button>
         </div>

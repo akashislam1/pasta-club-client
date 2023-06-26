@@ -8,7 +8,7 @@ const Reviews = () => {
         <h1 className="md:text-center mb-6 text-3xl font-bold underline p-3">
           Customer <span className="text-[#F65900] underline">Review</span>
         </h1>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-6">
           {/* card 1 */}
           <div className=" rounded-lg bg-slate-100 shadow-xl">
             <div className="p-10 space-y-4">
